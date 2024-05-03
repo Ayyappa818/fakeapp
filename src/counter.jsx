@@ -1,16 +1,18 @@
 import React,{useState} from "react";
+import Todolist from "./todolist";
 function Counter(){
-    var [count,setCount]=useState(0)
+    var [c,setC]=useState(0)
     function abc(){
-        setCount(count+1)
+        setC(c=>c+1)
     }
     function xyz(){
-        setCount(count-1)
+        setC(c=>c-1)
     }
     return <div className="border border-3 border-primary p-3">
-    <h1>counter:{count}</h1>
+    <h1>counter:{c}</h1>
     <button onClick={()=>{abc()}}>Inc</button>
     <button onClick={()=>{xyz()}}>Dec</button>
+    <Todolist></Todolist>
     </div>
 }
 export default Counter

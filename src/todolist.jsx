@@ -1,9 +1,12 @@
 import React,{useState} from "react";
+
 function Todolist(){
-    var[todo,setTodo]=useState(["Ayyappa","Anji","Vikas"])
-    var[xy,setXy]=useState("")
-    function xyz(){
-       setTodo([...todo,xy])
+    console.log("todolist")
+    var[newtodo,setNewtodo]=useState("")
+    var[todo,setTodo]=useState(["Ayyappa","Anji","Vikas","Tarun"])
+    function addTodo(){
+        console.log("hello")
+       setTodo([...todo,newtodo])
     }
     function zx(i){
         var de=[...todo]
@@ -11,15 +14,15 @@ function Todolist(){
         setTodo(de)
     }
     return <div className="border border-2 border-info p-3 m-3">
-        <input type="text" name="" onChange={(e)=>{setXy(e.target.value)}} />
-        <button onChange={()=>{xyz()}}>Add</button>
-        <div>
+        <input type="text" onChange={(e)=>{setNewtodo(e.target.value)}} />
+        <button onClick={()=>{addTodo()}}>Add Todo</button>
+        <ul>
             {
                 todo.map((s)=>{
                     return <li>{s} <button onClick={()=>{zx()}}>Del</button></li>
                 })
             }
-        </div>
+        </ul>
     </div>
 }
 export default Todolist

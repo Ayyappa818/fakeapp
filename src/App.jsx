@@ -7,7 +7,6 @@ import TodolistRe from './todolistR';
 function App() {
  return <div>
     <Counter></Counter>
-    <Todolist></Todolist>
     {/* <CounterRe></CounterRe>
     <TodolistRe></TodolistRe> */}
  </div>
